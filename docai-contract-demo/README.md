@@ -1,4 +1,4 @@
-# DocAI Expense Parser Demo
+# DocAI Contract Parser Demo
 
 # Before Starting
 Make sure you are on the correct branch. 
