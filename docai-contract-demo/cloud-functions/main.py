@@ -18,10 +18,10 @@ table_name = os.environ.get('BQ_TABLE_NAME')
 
 # Set variables
 address_substring = "address"
-gcs_output_uri = f"gs://{project_id}-output-petsmart-invoices"
-gcs_output_bucket_name = f"{project_id}-output-petsmart-invoices"
-gcs_archive_bucket_name = f"{project_id}-archived-petsmart-invoices"
-gcs_rejected_bucket_name = f"{project_id}-rejected-petsmart-files"
+gcs_output_uri = f"gs://{project_id}-output-petsmart-contracts"
+gcs_output_bucket_name = f"{project_id}-output-petsmart-contracts"
+gcs_archive_bucket_name = f"{project_id}-archived-petsmart-contracts"
+gcs_rejected_bucket_name = f"{project_id}-rejected-petsmart-contracts"
 name = f"projects/{project_id}/locations/{location}/processors/{processor_id}"
 accepted_file_types = ["application/pdf","image/jpg","image/png","image/gif","image/tiff","image/jpeg","image/tif","image/webp","image/bmp"]
 
