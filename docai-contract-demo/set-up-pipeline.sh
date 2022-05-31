@@ -6,16 +6,16 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "${DIR}/.env.local"
 
 # create archive bucket
-gsutil mb -p ${PROJECT_ID} -c standard -l ${BUCKET_LOCATION} -b on gs://${PROJECT_ID}-archived-petsmart-invoices
+gsutil mb -p ${PROJECT_ID} -c standard -l ${BUCKET_LOCATION} -b on gs://${PROJECT_ID}-archived-${COMPANY_NAME}-contracts
 
 # create input bucket
-gsutil mb -p ${PROJECT_ID} -c standard -l ${BUCKET_LOCATION} -b on gs://${PROJECT_ID}-input-petsmart-invoices
+gsutil mb -p ${PROJECT_ID} -c standard -l ${BUCKET_LOCATION} -b on gs://${PROJECT_ID}-input-${COMPANY_NAME}-contracts
 
 # create output bucket
-gsutil mb -p ${PROJECT_ID} -c standard -l ${BUCKET_LOCATION} -b on gs://${PROJECT_ID}-output-petsmart-invoices
+gsutil mb -p ${PROJECT_ID} -c standard -l ${BUCKET_LOCATION} -b on gs://${PROJECT_ID}-output-${COMPANY_NAME}-contracts
 
 # create bucket to store rejected files
-gsutil mb -p ${PROJECT_ID} -c standard -l ${BUCKET_LOCATION} -b on gs://${PROJECT_ID}-rejected-petsmart-files
+gsutil mb -p ${PROJECT_ID} -c standard -l ${BUCKET_LOCATION} -b on gs://${PROJECT_ID}-rejected-${COMPANY_NAME}-contracts
 
 # create bq table
 bq --location=US mk  -d \
@@ -34,5 +34,5 @@ gcloud functions deploy process-invoices \
 --source=cloud-functions \
 --timeout=400 \
 --env-vars-file=cloud-functions/.env.yaml \
---trigger-resource=gs://${PROJECT_ID}-input-petsmart-invoices \
+--trigger-resource=gs://${PROJECT_ID}-input-${COMPANY_NAME}-contracts \
 --trigger-event=google.storage.object.finalize
