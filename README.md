@@ -11,4 +11,4 @@ Learn how to use Google Cloud Platform to construct a pipeline to process docume
  - General Processors
 
 # Visualizing the workflow
-![GCP Workflow](https://user-images.githubusercontent.com/47513414/150703075-8f608859-436e-4c22-8dc9-f71121705f3a.png)
+<img src="https://github.com/tgaillard1/docai/blob/main/images/workflow.png" alt="Workflow Diagram"/>
