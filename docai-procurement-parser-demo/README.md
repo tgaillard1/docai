@@ -21,7 +21,7 @@ Learn how to use Google Cloud Platform to construct a pipeline to process invoic
 
 2. Enable the **Cloud Document AI API** and **Cloud Build API** in the project you created in step #1 
 
-3. If you do not have access to the parser, request access via [this link](https://docs.google.com/forms/d/e/1FAIpQLSc_6s8jsHLZWWE0aSX0bdmk24XDoPiE_oq5enDApLcp1VKJ-Q/viewform?gxids=7826). Here is a [link](https://cloud.google.com/document-ai/docs/processors-list#processor_expense-parser) to the official Expense Parser documentation.
+3. If you do not have access to the parser, request access via [this link](https://docs.google.com/forms/d/e/1FAIpQLSc_6s8jsHLZWWE0aSX0bdmk24XDoPiE_oq5enDApLcp1VKJ-Q/viewform?gxids=7826). Here is a [link](https://cloud.google.com/document-ai/docs/processors-list#processor_invoice-processor) to the official Invoice Parser documentation.
 
 4. Create a service account that will later be used by Cloud Functions
 
