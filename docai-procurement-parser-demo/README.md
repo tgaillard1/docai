@@ -5,7 +5,7 @@ Make sure you are on the correct branch.
 Branch "v1api" uses the newer version of documentai API and has a different BigQuery schema. It also showcases single document processing as opposed to batch document processing and thus works faster.
 
 # Objective
-Learn how to use Google Cloud Platform to construct a pipeline to process expenses (ie. receipts). 
+Learn how to use Google Cloud Platform to construct a pipeline to process invoices. 
 
 # Visualizing the workflow
 <img src="https://github.com/tgaillard1/docai/blob/main/images/docai-flow.png" alt="DocAi Workflow Diagram"/>
@@ -27,7 +27,7 @@ Learn how to use Google Cloud Platform to construct a pipeline to process expens
 
     1. Navigate to **IAM & Admin** -> **Service Accounts**
     2. Click on **Create a service account**
-    3. In the **Service account name** section, type in `process-receipt-example` or a name of your choice
+    3. In the **Service account name** section, type in `process-invoice-example` or a name of your choice
     4. Click **Create and continue**
     5. Grant this service account the following roles:
         * Storage Admin
@@ -59,7 +59,7 @@ gh repo clone tgaillard/docai
     3. Update the following values in .env.local:
 
         * PROJECT_ID should match your current project's ID
-        * BUCKET_LOCATION is where you want the raw receipts to be stored
+        * BUCKET_LOCATION is where you want the raw invoices to be stored
         * CLOUD_FUNCTION_LOCATION is where your code executes
         * CLOUD_FUNCTION_SERVICE_ACCOUNT should be the same name you created in Step 4
 
