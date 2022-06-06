@@ -93,6 +93,6 @@ git clone https://github.com/tgaillard1/docai.git
 
 8. Testing/Validating the demo
 
-    1. Upload a sample invoice in the input bucket (<project_id>-input-invoice)
+    1. Upload a sample invoice in the input bucket (<project_id>-input-invoices)
     2. At the end of the processing, you should expect your BigQuery tables to be populated with extracted entities (eg. total_amount, supplier_name, etc.) 
     3. With the structured data in BigQuery, we can now design downstream analytical tools to gain actionable insights as well as detect errors/frauds.
