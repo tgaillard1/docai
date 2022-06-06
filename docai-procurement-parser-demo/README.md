@@ -46,7 +46,7 @@ Learn how to use Google Cloud Platform to construct a pipeline to process invoic
 
 6. Activate your Command Shell and clone this GitHub Repo in your Command shell using the command:
 ```
-gh repo clone tgaillard/docai
+git clone https://github.com/tgaillard1/docai.git
 ```
 
 7. Execute Bash shell scripts in your Cloud Shell terminal to create cloud resources (i.e Google Cloud Storage Buckets, Pub/Sub topics, Cloud Functions, BigQuery dataset and table)
@@ -54,7 +54,7 @@ gh repo clone tgaillard/docai
     1. Change directory to the scripts folder
 
         ```
-        cd docai-procurement-parser-demo
+        cd docai/docai-procurement-parser-demo
         ```
     3. Update the following values in .env.local:
 
