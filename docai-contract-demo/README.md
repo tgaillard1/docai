@@ -40,13 +40,13 @@ Learn how to use Google Cloud Platform to construct a pipeline to process expens
 
     * At this point, you should have your request in Step 3 approved and have access to expense parser
     * Navigate to **console** -> **Document AI** -> **processors**
-    * Click **Create processor** and choose **expense parser**
+    * Click **Create processor** and choose **contract parser**
     * Name your processor and click **Create**
     * Take note of your processor's region (eg. us) and processor ID
 
 6. Activate your Command Shell and clone this GitHub Repo in your Command shell using the command:
 ```
-gh repo clone jiya-zhang/docai-expense-parser-demo
+gh repo clone https://github.com/tgaillard1/docai
 ```
 
 7. Execute Bash shell scripts in your Cloud Shell terminal to create cloud resources (i.e Google Cloud Storage Buckets, Pub/Sub topics, Cloud Functions, BigQuery dataset and table)
@@ -54,7 +54,7 @@ gh repo clone jiya-zhang/docai-expense-parser-demo
     1. Change directory to the scripts folder
 
         ```
-        cd docai-expense-parser-demo
+        cd docai/docai-contract-demo
         ```
     3. Update the following values in .env.local:
 

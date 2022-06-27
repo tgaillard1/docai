@@ -18,10 +18,10 @@ table_name = os.environ.get('BQ_TABLE_NAME')
 
 # Set variables
 address_substring = "address"
-gcs_output_uri = f"gs://{project_id}-output-petsmart-contracts"
-gcs_output_bucket_name = f"{project_id}-output-petsmart-contracts"
-gcs_archive_bucket_name = f"{project_id}-archived-petsmart-contracts"
-gcs_rejected_bucket_name = f"{project_id}-rejected-petsmart-contracts"
+gcs_output_uri = f"gs://{project_id}-output-acme-contracts"
+gcs_output_bucket_name = f"{project_id}-output-acme-contracts"
+gcs_archive_bucket_name = f"{project_id}-archived-acme-contracts"
+gcs_rejected_bucket_name = f"{project_id}-rejected-acme-contracts"
 name = f"projects/{project_id}/locations/{location}/processors/{processor_id}"
 accepted_file_types = ["application/pdf","image/jpg","image/png","image/gif","image/tiff","image/jpeg","image/tif","image/webp","image/bmp"]
 
@@ -44,37 +44,20 @@ def write_to_bq(dataset_name, table_name, entities_extracted_dict):
   
    job_config = bigquery.LoadJobConfig(source_format=bigquery.SourceFormat.NEWLINE_DELIMITED_JSON, ignore_unknown_values=True,
    schema=[
-        bigquery.SchemaField("currency", "STRING"),
-        bigquery.SchemaField("invoice_id", "STRING"),
-        bigquery.SchemaField("net_amount", "STRING"),
-        bigquery.SchemaField("remit_to_name", "STRING"),
-        bigquery.SchemaField("remit_to_address", "STRING"),        
-        bigquery.SchemaField("invoice_date", "DATE"),        
-        bigquery.SchemaField("supplier_address", "STRING"),        
-        bigquery.SchemaField("supplier_city", "STRING"),
-        bigquery.SchemaField("supplier_name", "STRING"),        
-        bigquery.SchemaField("supplier_website", "STRING"), 
-        bigquery.SchemaField("supplier_email", "STRING"), 
-        bigquery.SchemaField("receiver_name", "STRING"),        
-        bigquery.SchemaField("receiver_tax_id", "STRING"),
-        bigquery.SchemaField("receiver_address", "STRING"),
-        bigquery.SchemaField("supplier_iban", "STRING"),        
-        bigquery.SchemaField("purchase_order", "STRING"),        
-        bigquery.SchemaField("total_amount", "STRING"),
-        bigquery.SchemaField("total_tax_amount", "STRING"),        
-        bigquery.SchemaField("line_item", "STRING"),
-        bigquery.SchemaField("line_item_amount", "STRING"),
-        bigquery.SchemaField("line_item_description", "STRING"),
-        bigquery.SchemaField("ship_from_address", "STRING"), 
-        bigquery.SchemaField("ship_to_address", "STRING"),        
-        bigquery.SchemaField("carrier", "STRING"),        
-        bigquery.SchemaField("freight_amount", "STRING"),  
-        bigquery.SchemaField("delivery_date", "DATE"), 
-        bigquery.SchemaField("due_date", "DATE"),        
-        bigquery.SchemaField("vat", "STRING"),
-        bigquery.SchemaField("vat_tax_amount", "STRING"),        
-        bigquery.SchemaField("payment_terms", "STRING"),
-        bigquery.SchemaField("line_item_product_code", "STRING")
+        bigquery.SchemaField("document_name", "STRING"),
+        bigquery.SchemaField("agreement_date", "DATE"),        
+        bigquery.SchemaField("arbitration_venue", "STRING"),        
+        bigquery.SchemaField("confidentiality_clause", "STRING"),
+        bigquery.SchemaField("effective_date", "DATE"), 
+        bigquery.SchemaField("expiration_date", "DATE"),        
+        bigquery.SchemaField("governing_law", "STRING"),
+        bigquery.SchemaField("indemnity_clause", "STRING"),        
+        bigquery.SchemaField("initial_term", "STRING"),
+        bigquery.SchemaField("litigation_venue", "STRING"),
+        bigquery.SchemaField("notice_to_terminate_renewal", "STRING"),
+        bigquery.SchemaField("non_compete_clause", "STRING"),
+        bigquery.SchemaField("parties", "STRING"),
+        bigquery.SchemaField("renewal_term", "STRING")
     ])
  
    job = bq_client.load_table_from_json(json_object, table_ref, job_config=job_config)
