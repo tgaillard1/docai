@@ -1,157 +1,72 @@
 [
     {
       "mode": "NULLABLE",
-      "name": "currency",
-      "type": "STRING"
-    },
-    {
-      "mode": "NULLABLE",
-      "name": "invoice_id",
-      "type": "STRING"
-    },    
-    {
-      "mode": "NULLABLE",
-      "name": "net_amount",
-      "type": "STRING"
-    },
-    {
-      "mode": "NULLABLE",
-      "name": "remit_to_name",
-      "type": "STRING"
-    },
-    {
-      "mode": "NULLABLE",
-      "name": "remit_to_address",
-      "type": "STRING"
-    },
-    {
-      "mode": "NULLABLE",
-      "name": "invoice_date",
-      "type": "DATE"
-    },
-    {
-      "mode": "NULLABLE",
-      "name": "supplier_address",
-      "type": "STRING"
-    },    
-    {
-      "mode": "NULLABLE",
-      "name": "supplier_city",
-      "type": "STRING"
-    },
-    {
-      "mode": "NULLABLE",
-      "name": "supplier_name",
-      "type": "STRING"
-    },
-    {
-      "mode": "NULLABLE",
-      "name": "supplier_website",
-      "type": "STRING"
-    },
-    {
-      "mode": "NULLABLE",
-      "name": "supplier_email",
-      "type": "STRING"
-    }, 
-    {
-        "mode": "NULLABLE",
-        "name": "receiver_name",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "receiver_tax_id",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "receiver_address",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "supplier_iban",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "purchase_order",
-        "type": "STRING"
-    },
-    {
-      "mode": "NULLABLE",
-      "name": "total_amount",
-      "type": "STRING"
-    },
-    {
-      "mode": "NULLABLE",
-      "name": "total_tax_amount",
-      "type": "STRING"
-    },
-    {
-      "mode": "NULLABLE",
-      "name": "line_item",
+      "name": "document_name",
       "type": "STRING"
     },
     {
         "mode": "NULLABLE",
-        "name": "line_item_amount",
-        "type": "STRING"
-    },    
-    {
-        "mode": "NULLABLE",
-        "name": "line_item_description",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "ship_from_address",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "ship_to_address",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "carrier",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "freight_amount",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "delivery_date",
+        "name": "agreement_date",
         "type": "DATE"
     },
     {
         "mode": "NULLABLE",
-        "name": "due_date",
+        "name": "arbitration_venue",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "confidentiality_clause",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "effective_date",
         "type": "DATE"
     },
     {
         "mode": "NULLABLE",
-        "name": "vat",
+        "name": "expiration_date",
+        "type": "DATE"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "governing_law",
         "type": "STRING"
     },
     {
         "mode": "NULLABLE",
-        "name": "vat_tax_amount",
+        "name": "indemnity_clause",
         "type": "STRING"
     },
     {
         "mode": "NULLABLE",
-        "name": "payment_terms",
+        "name": "initial_term",
         "type": "STRING"
     },
     {
         "mode": "NULLABLE",
-        "name": "line_item_product_code",
+        "name": "litigation_venue",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "notice_to_terminate_renewal",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "non_compete_clause",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "parties",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "renewal_term",
         "type": "STRING"
     }
   ]
