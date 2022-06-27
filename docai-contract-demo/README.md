@@ -5,7 +5,7 @@ Make sure you are on the correct branch.
 Branch "v1api" uses the newer version of documentai API and has a different BigQuery schema. It also showcases single document processing as opposed to batch document processing and thus works faster.
 
 # Objective
-Learn how to use Google Cloud Platform to construct a pipeline to process expenses (ie. receipts). 
+Learn how to use Google Cloud Platform to construct a pipeline to process contracts. 
 
 # Visualizing the workflow
 ![GCP Workflow](https://user-images.githubusercontent.com/47513414/150703075-8f608859-436e-4c22-8dc9-f71121705f3a.png)
@@ -27,7 +27,7 @@ Learn how to use Google Cloud Platform to construct a pipeline to process expens
 
     1. Navigate to **IAM & Admin** -> **Service Accounts**
     2. Click on **Create a service account**
-    3. In the **Service account name** section, type in `process-receipt-example` or a name of your choice
+    3. In the **Service account name** section, type in `process-contract-example` or a name of your choice
     4. Click **Create and continue**
     5. Grant this service account the following roles:
         * Storage Admin
@@ -59,7 +59,7 @@ gh repo clone https://github.com/tgaillard1/docai
     3. Update the following values in .env.local:
 
         * PROJECT_ID should match your current project's ID
-        * BUCKET_LOCATION is where you want the raw receipts to be stored
+        * BUCKET_LOCATION is where you want the raw contracts to be stored
         * CLOUD_FUNCTION_LOCATION is where your code executes
         * CLOUD_FUNCTION_SERVICE_ACCOUNT should be the same name you created in Step 4
 
@@ -93,6 +93,6 @@ gh repo clone https://github.com/tgaillard1/docai
 
 8. Testing/Validating the demo
 
-    1. Upload a sample receipt in the input bucket (<project_id>-input-receipts)
+    1. Upload a sample contract in the input bucket (<project_id>-input-contract)
     2. At the end of the processing, you should expect your BigQuery tables to be populated with extracted entities (eg. total_amount, supplier_name, etc.) 
     3. With the structured data in BigQuery, we can now design downstream analytical tools to gain actionable insights as well as detect errors/frauds.

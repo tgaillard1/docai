@@ -28,7 +28,7 @@ bq mk --table ${BQ_DATASET_NAME}.${BQ_TABLE_NAME} table-schema/doc_ai_extracted_
 gcloud functions deploy process-invoices \
 --ingress-settings=${INGRESS_SETTINGS} \
 --region=${CLOUD_FUNCTION_LOCATION} \
---entry-point=process_receipt \
+--entry-point=process_contracts \
 --runtime=python37 \
 --service-account=${CLOUD_FUNCTION_SERVICE_ACCOUNT}@${PROJECT_ID}.iam.gserviceaccount.com \
 --source=cloud-functions \
