@@ -65,7 +65,7 @@ def write_to_bq(dataset_name, table_name, entities_extracted_dict):
    
   
  
-def process_receipt(event, context):
+def process_contracts1(event, context):
    gcs_input_uri = 'gs://' + event['bucket'] + '/' + event['name']
 
    if event['contentType'] in accepted_file_types:

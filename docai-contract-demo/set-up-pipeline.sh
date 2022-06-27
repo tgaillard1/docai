@@ -25,14 +25,15 @@ ${PROJECT_ID}:${BQ_DATASET_NAME}
 bq mk --table ${BQ_DATASET_NAME}.${BQ_TABLE_NAME} table-schema/doc_ai_extracted_entities.json
 
 # deploy Cloud Function
-gcloud functions deploy process-invoices \
+gcloud functions deploy process-contracts1 \
 --ingress-settings=${INGRESS_SETTINGS} \
 --region=${CLOUD_FUNCTION_LOCATION} \
---entry-point=process_contracts \
+--entry-point=process_contracts1 \
 --runtime=python37 \
 --service-account=${CLOUD_FUNCTION_SERVICE_ACCOUNT}@${PROJECT_ID}.iam.gserviceaccount.com \
 --source=cloud-functions \
---timeout=400 \
+--timeout=540 \
+--memory=4096MB \
 --env-vars-file=cloud-functions/.env.yaml \
 --trigger-resource=gs://${PROJECT_ID}-input-${COMPANY_NAME}-contracts \
 --trigger-event=google.storage.object.finalize
