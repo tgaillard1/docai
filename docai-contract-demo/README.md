@@ -8,7 +8,7 @@ Branch "v1api" uses the newer version of documentai API and has a different BigQ
 Learn how to use Google Cloud Platform to construct a pipeline to process contracts. 
 
 # Visualizing the workflow
-![GCP Workflow](https://user-images.githubusercontent.com/47513414/150703075-8f608859-436e-4c22-8dc9-f71121705f3a.png)
+<img src="https://github.com/tgaillard1/docai/blob/main/images/docai-image1.png" alt="DocAi Workflow Diagram"/>
 
 # GCP Services used in the Demo
 * [Google Cloud Procurement Document AI](https://cloud.google.com/solutions/procurement-doc-ai)
