@@ -11,7 +11,7 @@ Learn how to use Google Cloud Platform to construct a pipeline to process contra
 <img src="https://github.com/tgaillard1/docai/blob/main/images/docai-contracts.png" alt="DocAi Workflow Diagram"/>
 
 # GCP Services used in the Demo
-* [Google Cloud Procurement Document AI](https://cloud.google.com/solutions/procurement-doc-ai)
+* [Google Cloud Contract Document AI](https://cloud.google.com/solutions/contract-doc-ai)
 * [Google Cloud Storage](https://cloud.google.com/storage)
 * [Google Cloud Functions](https://cloud.google.com/functions)
 * [BigQuery](https://cloud.google.com/bigquery)
