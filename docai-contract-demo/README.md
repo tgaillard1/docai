@@ -46,7 +46,7 @@ Learn how to use Google Cloud Platform to construct a pipeline to process contra
 
 6. Activate your Command Shell and clone this GitHub Repo in your Command shell using the command:
 ```
-gh repo clone https://github.com/tgaillard1/docai
+git clone https://github.com/tgaillard1/docai
 ```
 
 7. Execute Bash shell scripts in your Cloud Shell terminal to create cloud resources (i.e Google Cloud Storage Buckets, Pub/Sub topics, Cloud Functions, BigQuery dataset and table)
